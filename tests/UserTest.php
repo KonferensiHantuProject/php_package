@@ -6,6 +6,7 @@ namespace Nazhim\FirstPackage\Test;
 
 use PHPUnit\Framework\TestCase;
 use Nazhim\FirstPackage\User;
+use Nazhim\FirstPackage\Request;
 
 final class UserTest extends TestCase
 {
@@ -30,5 +31,15 @@ final class UserTest extends TestCase
 
         $this->assertIsString($user->tellName());
         $this->assertStringContainsStringIgnoringCase('John', $user->tellName());
+    }
+
+    /**
+     * @group testGuzzle
+     */
+    public function testGuzzle()
+    {
+        $request = new Request();
+
+        $this->assertNotNull($request->req());
     }
 }
