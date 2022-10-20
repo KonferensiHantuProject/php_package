@@ -1,0 +1,19 @@
+{
+    "name": "nazhim/first_package",
+    "description": "First Test Package",
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Nazhim\\FirstPackage\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "MuhammadNazhimMaulana",
+            "email": "nazhimmaulanamuhammad@gmail.com"
+        }
+    ],
+    "require": {}
+}
