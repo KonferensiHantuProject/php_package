@@ -40,6 +40,8 @@ final class UserTest extends TestCase
     {
         $request = new Request();
 
+        // Return the value to returns.log
+        error_log($request->req(), 3, "returns.log");
         $this->assertNotNull($request->req());
     }
 }

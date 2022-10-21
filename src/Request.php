@@ -17,7 +17,6 @@ class Request {
             $response = $client->request('GET', '/posts');
 
             $data = (string) $response->getBody();
-            $data = json_decode($data);
             
             return $data;
         } catch (RequestException $e) {
