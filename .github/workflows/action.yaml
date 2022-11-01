@@ -1,5 +1,5 @@
-name: GitHub Actions Demo
-run-name: ${{ github.actor }} Mencoba GitHub Actions
+name: Check Package
+run-name: ${{ github.actor }} Checking Package
 on:
   push:
     branches: [ master ]
@@ -7,7 +7,7 @@ on:
     branches: [ master ]
 
 jobs:
-  print_hello:
+  checking_package:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
