@@ -10,4 +10,10 @@ jobs:
   print_hello:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Hello World!"
+      - uses: shivammathur/setup-php@v2
+        with:
+            php-version: '8.1'
+      - name: install composer dependencies
+        run: composer install
+      - name: testing one test
+        run: ./vendor/bin/phpunit --group testGuzzle
